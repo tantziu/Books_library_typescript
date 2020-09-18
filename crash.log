@@ -1,0 +1,4 @@
+PID 31769 received SIGSEGV for address: 0x0
+0   segfault-handler.node               0x0000000101dc00c0 _ZL16segfault_handleriP9__siginfoPv + 304
+1   libsystem_platform.dylib            0x00007fff6c51d5fd _sigtramp + 29
+2   ???                                 0x000000010200aa98 0x0 + 4328565400
