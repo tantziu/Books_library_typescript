@@ -1,0 +1,34 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to the #{title} page
+
+	a(href='/book/form') Add a book
+	//- p #{message}
+	table
+		thead
+			tr
+				th Title
+				th Author
+				th ISBN
+		tbody
+			if books
+				each book in books
+					tr
+						td= book.title
+						td= book.author
+						td= book.isbn
+						td
+							//- <input type="hidden" name="_method" value="DELETE">
+							form(method='post', action= '/book/'+book.id+'?_method=DELETE')
+								button Remove
+								//- a(href='/book/' + book.id) Delete
+								
+								a(href='/book/edit/' + book._id) Edit
+							//- a(href='/book:' + book._id) Delete
+							//- input(type="hidden", name="_method", value="delete")
+							//- a(href='/book') Delete
+							//- form()
+
+							
